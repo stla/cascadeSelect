@@ -343,7 +343,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: white;\n}", "",{"version":3,"sources":["webpack://./srcjs/css/card.css"],"names":[],"mappings":"AAAA;IACI,+BAA+B;IAC/B,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,YAAY;AAChB","sourcesContent":[".card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: white;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: white;\n    font-size: 23px;\n}\n", "",{"version":3,"sources":["webpack://./srcjs/css/card.css"],"names":[],"mappings":"AAAA;IACI,+BAA+B;IAC/B,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,YAAY;IACZ,eAAe;AACnB","sourcesContent":[".card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: white;\n    font-size: 23px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -9413,7 +9413,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-//import PrimeReact from 'primereact/api';
 
 
  // core css
@@ -9428,7 +9427,7 @@ var App = function App(props) {
   var data = props.data;
   var handleChange = function handleChange(e) {
     setSelection(e.value);
-    props.setShinyValue(selection.cname);
+    props.setShinyValue(e.value.cname);
     console.log(e);
   };
   return /*#__PURE__*/React.createElement("div", {
@@ -9439,7 +9438,7 @@ var App = function App(props) {
     options: data,
     optionLabel: "cname",
     optionGroupLabel: "name",
-    optionGroupChildren: ['states', 'cities'],
+    optionGroupChildren: ["states", "cities"],
     className: "w-full md:w-14rem",
     breakpoint: "767px",
     placeholder: "Select a City"
@@ -9455,7 +9454,7 @@ var CascadeSelectInput = function CascadeSelectInput(_ref) {
     setShinyValue: setValue
   });
 };
-Object(reactR__WEBPACK_IMPORTED_MODULE_0__["reactShinyInput"])('.cascadeSelect', 'cascadeSelect.cascadeSelect', CascadeSelectInput);
+Object(reactR__WEBPACK_IMPORTED_MODULE_0__["reactShinyInput"])(".cascadeSelect", "cascadeSelect.cascadeSelect", CascadeSelectInput);
 
 /***/ }),
 

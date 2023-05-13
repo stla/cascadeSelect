@@ -12,7 +12,7 @@ const App = (props) => {
 
   const handleChange = (e) => {
     setSelection(e.value);
-    props.setShinyValue(selection.cname);
+    props.setShinyValue(e.value.cname);
     console.log(e);
   };
 
