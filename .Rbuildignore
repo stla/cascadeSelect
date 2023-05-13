@@ -7,3 +7,4 @@
 ^webpack\.config\.js$
 ^yarn\.lock$
 ^inst/trash$
+^inst/gifs$

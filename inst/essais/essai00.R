@@ -1,11 +1,16 @@
 library(shiny)
 library(cascadeSelect)
 
-ui <- basicPage(
-  titlePanel("reactR Input Example"),
-  cascadeSelectInput("textInput", choices = countries),
-  br(),br(),
-  textOutput("textOutput")
+ui <- fluidPage(
+  titlePanel("Cascade Select"),
+  fluidRow(
+    column(
+      6,
+      cascadeSelectInput("textInput", choices = countries),
+      br(),br(),
+      textOutput("textOutput")
+    )
+  )
 )
 
 server <- function(input, output, session) {
