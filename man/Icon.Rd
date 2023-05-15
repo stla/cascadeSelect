@@ -17,10 +17,11 @@ for example \code{"bi bi-apple"} (see
 
 \item{color}{a CSS color}
 
-\item{size}{size of the icon, a css measurement}
+\item{size}{size of the icon, a css measurement (e.g.
+\code{1rem}, \code{11px})}
 }
 \value{
-A list to be included in the field \code{icon} of the \code{choices}
+A list to be included in the fields \code{icon} of the \code{choices}
   list of \code{\link{cascadeSelectInput}}.
 }
 \description{

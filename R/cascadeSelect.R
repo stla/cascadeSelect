@@ -9,9 +9,10 @@
 #'   for example \code{"bi bi-apple"} (see
 #'   \href{https://icons.getbootstrap.com/}{Bootstrap icons})
 #' @param color a CSS color
-#' @param size size of the icon, a css measurement
+#' @param size size of the icon, a css measurement (e.g.
+#'   \code{1rem}, \code{11px})
 #'
-#' @return A list to be included in the field \code{icon} of the \code{choices}
+#' @return A list to be included in the fields \code{icon} of the \code{choices}
 #'   list of \code{\link{cascadeSelectInput}}.
 #' @export
 #' @importFrom htmltools validateCssUnit
