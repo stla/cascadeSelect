@@ -13,4 +13,8 @@ Imports:
     htmltools,
     reactR,
     shiny,
-    fontawesome
+    fontawesome,
+    grDevices
+Depends: 
+    R (>= 2.10)
+LazyData: true

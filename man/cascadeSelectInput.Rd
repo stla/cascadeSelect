@@ -2,7 +2,7 @@
 % Please edit documentation in R/cascadeSelect.R
 \name{cascadeSelectInput}
 \alias{cascadeSelectInput}
-\title{Add Title}
+\title{Cascade select input}
 \usage{
 cascadeSelectInput(
   inputId,
@@ -14,6 +14,24 @@ cascadeSelectInput(
   optionGroupChildren
 )
 }
+\arguments{
+\item{inputId}{the id that will be used to get the selected value in Shiny}
+
+\item{choices}{a hierarchical list; see the examples}
+
+\item{selected}{the selected value; \code{NULL} for none}
+
+\item{placeholder}{placeholder appearing when no selected value}
+
+\item{optionLabel}{the label of the options to be selected}
+
+\item{optionGroupLabel}{the label of the groups of options}
+
+\item{optionGroupChildren}{a list of the names of the groups of options}
+}
+\value{
+A \code{shiny.tag.list} object to be included in a Shiny UI.
+}
 \description{
-Add Description
+Create a cascade select input for Shiny.
 }
