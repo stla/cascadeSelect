@@ -19,8 +19,8 @@ const App = (props) => {
     return (
       <div className="flex align-items-center gap-2">
         {option.subfolders && <i className="x" />}
-        {option.files && <i className={option.icon} style={{ color: 'green' }} />}
-        {option.fname && <i className={option.icon} style={{ color: 'green' }} />}
+        {option.files && <i className={option.icon.icon} style={{ color: option.icon.color, fontSize: option.icon.size }} />}
+        {option.fname && <i className={option.icon.icon} style={{ color: option.icon.color, fontSize: option.icon.size }} />}
         <span>{option.fname}</span>
         <span>{option.name}</span>
       </div>
