@@ -52,7 +52,7 @@ const App = (props) => {
         optionLabel={props.optionLabel}
         optionGroupLabel={props.optionGroupLabel}
         optionGroupChildren={props.optionGroupChildren}
-        className="w-fit md:w-14rem"
+        className="w-fit md:w-14rem text-2xl w-10"
         breakpoint="767px"
         itemTemplate={optionTemplate}
       />
