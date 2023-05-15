@@ -9239,7 +9239,10 @@ var App = function App(props) {
   };
   var optionTemplate = function optionTemplate(option) {
     return /*#__PURE__*/React.createElement("div", {
-      className: "flex align-items-center gap-2"
+      className: "flex align-items-center gap-2",
+      style: {
+        fontSize: "1.5rem"
+      }
     }, option[props.optionGroupChildren[0]] && /*#__PURE__*/React.createElement("i", {
       className: option.icon.icon,
       style: {
@@ -9258,7 +9261,15 @@ var App = function App(props) {
         color: option.icon.color,
         fontSize: option.icon.size
       }
-    }), /*#__PURE__*/React.createElement("span", null, option[props.optionLabel]), /*#__PURE__*/React.createElement("span", null, option[props.optionGroupLabel]));
+    }), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "1.5rem"
+      }
+    }, option[props.optionLabel]), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "1.5rem"
+      }
+    }, option[props.optionGroupLabel]));
   };
   return /*#__PURE__*/React.createElement("div", {
     className: "card flex justify-content-center"

@@ -17,7 +17,10 @@ const App = (props) => {
 
   const optionTemplate = (option) => {
     return (
-      <div className="flex align-items-center gap-2">
+      <div
+        className="flex align-items-center gap-2"
+        style={{ fontSize: "1.5rem" }}
+      >
         {option[props.optionGroupChildren[0]] && (
           <i
             className={option.icon.icon}
@@ -36,8 +39,10 @@ const App = (props) => {
             style={{ color: option.icon.color, fontSize: option.icon.size }}
           />
         )}
-        <span>{option[props.optionLabel]}</span>
-        <span>{option[props.optionGroupLabel]}</span>
+        <span style={{ fontSize: "1.5rem" }}>{option[props.optionLabel]}</span>
+        <span style={{ fontSize: "1.5rem" }}>
+          {option[props.optionGroupLabel]}
+        </span>
       </div>
     );
   };
