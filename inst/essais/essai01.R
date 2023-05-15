@@ -3,7 +3,6 @@ library(cascadeSelect)
 library(fontawesome)
 
 ui <- fluidPage(
-  #tags$head(tags$link(rel="stylesheet", href="https://unpkg.com/primeicons@6.0.1/primeicons.css")),
   titlePanel("Cascade Select"),
   fluidRow(
     column(

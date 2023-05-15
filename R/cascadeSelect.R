@@ -52,7 +52,7 @@ cascadeSelectInput <- function(
         src = "www/cascadeSelect/cascadeSelect",
         package = "cascadeSelect",
         script = "cascadeSelect.js",
-        stylesheet = "primeicons.css"
+        stylesheet = c("primeicons.css", "themes/bootstrap4-dark-purple/theme.css")
       ),
       fa_html_dependency()
     ),

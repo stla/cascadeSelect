@@ -1,4 +1,4 @@
-import "primereact/resources/themes/bootstrap4-dark-purple/theme.css";
+//import "primereact/resources/themes/bootstrap4-dark-purple/theme.css";
 import "primereact/resources/primereact.css"; // core css
 import "primeflex/primeflex.css"; // css utility
 import "./css/styles.css";
