@@ -4,7 +4,7 @@
 \alias{Icon}
 \title{Create an icon}
 \usage{
-Icon(icon, color = "red", size = "1rem")
+Icon(icon = "pi pi-circle-fill", color = "red", size = "1rem")
 }
 \arguments{
 \item{icon}{the name (actually the class name) of the icon;

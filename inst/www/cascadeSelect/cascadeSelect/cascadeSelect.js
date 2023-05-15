@@ -299,7 +299,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "html {\n    font-size: 14px;\n}\n\nbody {\n    font-family: var(--font-family);\n    font-weight: normal;\n    background: var(--surface-ground);\n    color: var(--text-color);\n    padding: 1rem;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n.card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n}\n", "",{"version":3,"sources":["webpack://./srcjs/css/styles.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB;;AAEA;IACI,+BAA+B;IAC/B,mBAAmB;IACnB,iCAAiC;IACjC,wBAAwB;IACxB,aAAa;IACb,mCAAmC;IACnC,kCAAkC;AACtC;;AAEA;IACI,+BAA+B;IAC/B,aAAa;IACb,mBAAmB;IACnB,mBAAmB;AACvB","sourcesContent":["html {\n    font-size: 14px;\n}\n\nbody {\n    font-family: var(--font-family);\n    font-weight: normal;\n    background: var(--surface-ground);\n    color: var(--text-color);\n    padding: 1rem;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n.card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "html {\n    font-size: 14px;\n}\n\nbody {\n    font-family: var(--font-family);\n    font-weight: normal;\n    background: var(--surface-ground);\n    color: var(--text-color);\n    padding: 1rem;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n.card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: whitesmoke;\n}\n", "",{"version":3,"sources":["webpack://./srcjs/css/styles.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB;;AAEA;IACI,+BAA+B;IAC/B,mBAAmB;IACnB,iCAAiC;IACjC,wBAAwB;IACxB,aAAa;IACb,mCAAmC;IACnC,kCAAkC;AACtC;;AAEA;IACI,+BAA+B;IAC/B,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,iBAAiB;AACrB","sourcesContent":["html {\n    font-size: 14px;\n}\n\nbody {\n    font-family: var(--font-family);\n    font-weight: normal;\n    background: var(--surface-ground);\n    color: var(--text-color);\n    padding: 1rem;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n.card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: whitesmoke;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -9294,19 +9294,25 @@ var App = function App(props) {
   var optionTemplate = function optionTemplate(option) {
     return /*#__PURE__*/React.createElement("div", {
       className: "flex align-items-center gap-2"
-    }, option.subfolders && /*#__PURE__*/React.createElement("i", {
-      className: "x"
-    }), option.files && /*#__PURE__*/React.createElement("i", {
-      className: option.icon,
+    }, option[props.optionGroupChildren[0]] && /*#__PURE__*/React.createElement("i", {
+      className: option.icon.icon,
       style: {
-        color: 'green'
+        color: option.icon.color,
+        fontSize: option.icon.size
       }
-    }), option.fname && /*#__PURE__*/React.createElement("i", {
-      className: option.icon,
+    }), option[props.optionGroupChildren[1]] && /*#__PURE__*/React.createElement("i", {
+      className: option.icon.icon,
       style: {
-        color: 'green'
+        color: option.icon.color,
+        fontSize: option.icon.size
       }
-    }), /*#__PURE__*/React.createElement("span", null, option.fname), /*#__PURE__*/React.createElement("span", null, option.name));
+    }), option[props.optionLabel] && /*#__PURE__*/React.createElement("i", {
+      className: option.icon.icon,
+      style: {
+        color: option.icon.color,
+        fontSize: option.icon.size
+      }
+    }), /*#__PURE__*/React.createElement("span", null, option[props.optionLabel]), /*#__PURE__*/React.createElement("span", null, option[props.optionGroupLabel]));
   };
   return /*#__PURE__*/React.createElement("div", {
     className: "card flex justify-content-center"

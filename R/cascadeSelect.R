@@ -12,7 +12,8 @@
 #' @return A list to be included in the field \code{icon} of the \code{choices}
 #'   list of \code{\link{cascadeSelectInput}}.
 #' @export
-Icon <- function(icon, color = "red", size = "1rem") {
+#' @importFrom htmltools validateCssUnit
+Icon <- function(icon = "pi pi-circle-fill", color = "red", size = "1rem") {
   list(
     "icon"  = icon,
     "color" = validateColor(color),
