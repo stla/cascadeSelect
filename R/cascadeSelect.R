@@ -16,7 +16,7 @@
 #'   list of \code{\link{cascadeSelectInput}}.
 #' @export
 #' @importFrom htmltools validateCssUnit
-Icon <- function(icon = "pi pi-circle-fill", color = "red", size = "1rem") {
+Icon <- function(icon = "pi pi-circle-fill", color = "red", size = "1.5rem") {
   list(
     "icon"  = icon,
     "color" = validateColor(color),
