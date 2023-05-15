@@ -274,7 +274,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default.a);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "html {\n    font-size: 14px;\n}\n\nbody {\n    font-family: var(--font-family);\n    font-weight: normal;\n    background: var(--surface-ground);\n    color: var(--text-color);\n    padding: 1rem;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n.card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: whitesmoke;\n}\n", "",{"version":3,"sources":["webpack://./srcjs/css/styles.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB;;AAEA;IACI,+BAA+B;IAC/B,mBAAmB;IACnB,iCAAiC;IACjC,wBAAwB;IACxB,aAAa;IACb,mCAAmC;IACnC,kCAAkC;AACtC;;AAEA;IACI,+BAA+B;IAC/B,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,iBAAiB;AACrB","sourcesContent":["html {\n    font-size: 14px;\n}\n\nbody {\n    font-family: var(--font-family);\n    font-weight: normal;\n    background: var(--surface-ground);\n    color: var(--text-color);\n    padding: 1rem;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n.card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: whitesmoke;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "html {\n    font-size: 14px;\n}\n\nbody {\n    font-family: var(--font-family);\n    font-weight: normal;\n    background: var(--surface-ground);\n    color: var(--text-color);\n    padding: 1rem;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n.card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: var(--text-color);\n}\n\n.w-fit {\n  width: fit-content !important;\n}\n", "",{"version":3,"sources":["webpack://./srcjs/css/styles.css"],"names":[],"mappings":"AAAA;IACI,eAAe;AACnB;;AAEA;IACI,+BAA+B;IAC/B,mBAAmB;IACnB,iCAAiC;IACjC,wBAAwB;IACxB,aAAa;IACb,mCAAmC;IACnC,kCAAkC;AACtC;;AAEA;IACI,+BAA+B;IAC/B,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,wBAAwB;AAC5B;;AAEA;EACE,6BAA6B;AAC/B","sourcesContent":["html {\n    font-size: 14px;\n}\n\nbody {\n    font-family: var(--font-family);\n    font-weight: normal;\n    background: var(--surface-ground);\n    color: var(--text-color);\n    padding: 1rem;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n}\n\n.card {\n    background: var(--surface-card);\n    padding: 2rem;\n    border-radius: 10px;\n    margin-bottom: 1rem;\n    color: var(--text-color);\n}\n\n.w-fit {\n  width: fit-content !important;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -9270,7 +9270,7 @@ var App = function App(props) {
     optionLabel: props.optionLabel,
     optionGroupLabel: props.optionGroupLabel,
     optionGroupChildren: props.optionGroupChildren,
-    className: "w-full md:w-14rem",
+    className: "w-fit md:w-14rem",
     breakpoint: "767px",
     itemTemplate: optionTemplate
   }));

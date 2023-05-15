@@ -13,7 +13,8 @@ ui <- fluidPage(
         placeholder = "Select a file",
         optionLabel = "fname",
         optionGroupLabel = "name",
-        optionGroupChildren = list("subfolders", "files")
+        optionGroupChildren = list("subfolders", "files"),
+        theme = "viva-dark"
       ),
       br(),br(),
       textOutput("textOutput")

@@ -17,5 +17,9 @@ body {
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 1rem;
-    color: whitesmoke;
+    color: var(--text-color);
+}
+
+.w-fit {
+  width: fit-content !important;
 }
