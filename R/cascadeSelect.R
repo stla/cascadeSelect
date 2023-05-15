@@ -3,9 +3,11 @@
 #'
 #' @param icon the name (actually the class name) of the icon;
 #'   \strong{PrimeIcons} are available, for example \code{"pi pi-youtube"} (see
-#'   \href{https://primereact.org/icons/#list}{PrimeIcons}) and
+#'   \href{https://primereact.org/icons/#list}{PrimeIcons}),
 #'   \strong{fontawesome} icons are available, for example
-#'   \code{"fa fa-paper-plane"}
+#'   \code{"fa fa-paper-plane"}, and \strong{Bootstrap icons} are available,
+#'   for example \code{"bi bi-apple"} (see
+#'   \href{https://icons.getbootstrap.com/}{Bootstrap icons})
 #' @param color a CSS color
 #' @param size size of the icon, a css measurement
 #'
