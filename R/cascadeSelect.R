@@ -30,6 +30,8 @@ Icon <- function(icon = "pi pi-circle-fill", color = "red", size = "1rem") {
 #' @param optionLabel the label of the options to be selected
 #' @param optionGroupLabel the label of the groups of options
 #' @param optionGroupChildren a list of the names of the groups of options
+#' @param theme the CSS theme; see \code{data(themes)} for the list of
+#'   available themes
 #'
 #' @return A \code{shiny.tag.list} object to be included in a Shiny UI.
 #'
@@ -40,7 +42,8 @@ Icon <- function(icon = "pi pi-circle-fill", color = "red", size = "1rem") {
 #' @export
 cascadeSelectInput <- function(
     inputId, choices, selected = NULL, placeholder = "Select",
-    optionLabel, optionGroupLabel, optionGroupChildren
+    optionLabel, optionGroupLabel, optionGroupChildren,
+    theme = "bootstrap4-dark-purple"
 ) {
   createReactShinyInput(
     inputId = inputId,
@@ -52,7 +55,10 @@ cascadeSelectInput <- function(
         src = "www/cascadeSelect/cascadeSelect",
         package = "cascadeSelect",
         script = "cascadeSelect.js",
-        stylesheet = c("primeicons.css", "themes/bootstrap4-dark-purple/theme.css")
+        stylesheet = c(
+          "primeicons.css",
+          sprintf("themes/%s/theme.css", theme)
+        )
       ),
       fa_html_dependency()
     ),

@@ -11,7 +11,8 @@ cascadeSelectInput(
   placeholder = "Select",
   optionLabel,
   optionGroupLabel,
-  optionGroupChildren
+  optionGroupChildren,
+  theme = "bootstrap4-dark-purple"
 )
 }
 \arguments{
@@ -28,6 +29,9 @@ cascadeSelectInput(
 \item{optionGroupLabel}{the label of the groups of options}
 
 \item{optionGroupChildren}{a list of the names of the groups of options}
+
+\item{theme}{the CSS theme; see \code{data(themes)} for the list of
+available themes}
 }
 \value{
 A \code{shiny.tag.list} object to be included in a Shiny UI.
