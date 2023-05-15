@@ -6,7 +6,14 @@ ui <- fluidPage(
   fluidRow(
     column(
       6,
-      cascadeSelectInput("textInput", choices = countries),
+      cascadeSelectInput(
+        "textInput",
+        choices = countries,
+        placeholder = "Select a city",
+        optionLabel = "cname",
+        optionGroupLabel = "name",
+        optionGroupChildren = list("states", "cities")
+      ),
       br(),br(),
       textOutput("textOutput")
     )

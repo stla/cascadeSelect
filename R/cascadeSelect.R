@@ -6,7 +6,10 @@
 #' @importFrom htmltools htmlDependency tags
 #'
 #' @export
-cascadeSelectInput <- function(inputId, choices, selected = NULL) {
+cascadeSelectInput <- function(
+    inputId, choices, selected = NULL, placeholder = "Select",
+    optionLabel, optionGroupLabel, optionGroupChildren
+) {
   reactR::createReactShinyInput(
     inputId = inputId,
     class = "cascadeSelect",
@@ -15,10 +18,17 @@ cascadeSelectInput <- function(inputId, choices, selected = NULL) {
       version = "1.0.0",
       src = "www/cascadeSelect/cascadeSelect",
       package = "cascadeSelect",
-      script = "cascadeSelect.js"
+      script = "cascadeSelect.js",
+      stylesheet = "primeicons.css"
     ),
     default = selected,
-    configuration = list(data = choices),
+    configuration = list(
+      data = choices,
+      placeholder = placeholder,
+      optionLabel = optionLabel,
+      optionGroupLabel = optionGroupLabel,
+      optionGroupChildren = optionGroupChildren
+    ),
     container = htmltools::tags$div
   )
 }

@@ -3,7 +3,6 @@
   "dependencies": {
     "primereact": "^9.4.0",
     "primeflex": "^3.3.0",
-    "primeicons": "^6.0.1",
     "html-react-parser": "^3.0.16"
   },
   "devDependencies": {
