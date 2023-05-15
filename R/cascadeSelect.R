@@ -57,6 +57,7 @@ cascadeSelectInput <- function(
         script = "cascadeSelect.js",
         stylesheet = c(
           "primeicons.css",
+          "bootstrap-icons/font/bootstrap-icons.min.css",
           sprintf("themes/%s/theme.css", theme)
         )
       ),
