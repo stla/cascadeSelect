@@ -2,6 +2,7 @@
 
 export(cascadeSelectInput)
 export(updateCascadeSelectInput)
+importFrom(fontawesome,fa_html_dependency)
 importFrom(htmltools,htmlDependency)
 importFrom(htmltools,tags)
 importFrom(reactR,createReactShinyInput)

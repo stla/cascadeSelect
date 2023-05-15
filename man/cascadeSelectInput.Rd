@@ -4,7 +4,15 @@
 \alias{cascadeSelectInput}
 \title{Add Title}
 \usage{
-cascadeSelectInput(inputId, choices, selected = NULL)
+cascadeSelectInput(
+  inputId,
+  choices,
+  selected = NULL,
+  placeholder = "Select",
+  optionLabel,
+  optionGroupLabel,
+  optionGroupChildren
+)
 }
 \description{
 Add Description

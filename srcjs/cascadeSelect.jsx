@@ -1,10 +1,7 @@
 import "primereact/resources/themes/bootstrap4-dark-purple/theme.css";
 import "primereact/resources/primereact.css"; // core css
-//import "./css/styles.css"; // icons
-//import "primeicons/primeicons.css";
-//import { PrimeIcons } from 'primereact/api';
 import "primeflex/primeflex.css"; // css utility
-import "./css/card.css";
+import "./css/styles.css";
 import { reactShinyInput } from "reactR";
 import { CascadeSelect } from "primereact/cascadeselect";
 

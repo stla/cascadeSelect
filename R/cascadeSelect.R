@@ -4,22 +4,26 @@
 #'
 #' @importFrom reactR createReactShinyInput
 #' @importFrom htmltools htmlDependency tags
+#' @importFrom fontawesome fa_html_dependency
 #'
 #' @export
 cascadeSelectInput <- function(
     inputId, choices, selected = NULL, placeholder = "Select",
     optionLabel, optionGroupLabel, optionGroupChildren
 ) {
-  reactR::createReactShinyInput(
+  createReactShinyInput(
     inputId = inputId,
     class = "cascadeSelect",
-    dependencies = htmltools::htmlDependency(
-      name = "cascadeSelect-input",
-      version = "1.0.0",
-      src = "www/cascadeSelect/cascadeSelect",
-      package = "cascadeSelect",
-      script = "cascadeSelect.js",
-      stylesheet = "primeicons.css"
+    dependencies = list(
+      htmlDependency(
+        name = "cascadeSelect-input",
+        version = "1.0.0",
+        src = "www/cascadeSelect/cascadeSelect",
+        package = "cascadeSelect",
+        script = "cascadeSelect.js",
+        stylesheet = "primeicons.css"
+      ),
+      fa_html_dependency()
     ),
     default = selected,
     configuration = list(
@@ -29,7 +33,7 @@ cascadeSelectInput <- function(
       optionGroupLabel = optionGroupLabel,
       optionGroupChildren = optionGroupChildren
     ),
-    container = htmltools::tags$div
+    container = tags$div
   )
 }
 
