@@ -16,23 +16,25 @@ const App = (props) => {
   };
 
   const optionTemplate = (option) => {
+    let todoCounter = 1;
     return (
       <div
         className="flex align-items-center gap-2"
         style={{ fontSize: "1.5rem" }}
       >
-        {option[props.optionGroupChildren[0]] && (
-          <i
-            className={option.icon.icon}
-            style={{ color: option.icon.color, fontSize: option.icon.size }}
-          />
-        )}
-        {option[props.optionGroupChildren[1]] && (
-          <i
-            className={option.icon.icon}
-            style={{ color: option.icon.color, fontSize: option.icon.size }}
-          />
-        )}
+        {props.optionGroupChildren.map((child) => {
+          const element = option[child];
+          return (
+            element && (
+              <i
+                key={todoCounter++}
+                className={option.icon.icon}
+                style={{ color: option.icon.color, fontSize: option.icon.size }}
+              />
+            )
+          );
+        })}
+
         {option[props.optionLabel] && (
           <i
             className={option.icon.icon}

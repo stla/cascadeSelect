@@ -9238,23 +9238,22 @@ var App = function App(props) {
     console.log(e);
   };
   var optionTemplate = function optionTemplate(option) {
+    var todoCounter = 1;
     return /*#__PURE__*/React.createElement("div", {
       className: "flex align-items-center gap-2",
       style: {
         fontSize: "1.5rem"
       }
-    }, option[props.optionGroupChildren[0]] && /*#__PURE__*/React.createElement("i", {
-      className: option.icon.icon,
-      style: {
-        color: option.icon.color,
-        fontSize: option.icon.size
-      }
-    }), option[props.optionGroupChildren[1]] && /*#__PURE__*/React.createElement("i", {
-      className: option.icon.icon,
-      style: {
-        color: option.icon.color,
-        fontSize: option.icon.size
-      }
+    }, props.optionGroupChildren.map(function (child) {
+      var element = option[child];
+      return element && /*#__PURE__*/React.createElement("i", {
+        key: todoCounter++,
+        className: option.icon.icon,
+        style: {
+          color: option.icon.color,
+          fontSize: option.icon.size
+        }
+      });
     }), option[props.optionLabel] && /*#__PURE__*/React.createElement("i", {
       className: option.icon.icon,
       style: {
