@@ -1,6 +1,5 @@
 library(shiny)
 library(cascadeSelect)
-library(fontawesome)
 
 ui <- fluidPage(
   titlePanel("Cascade Select"),
@@ -8,7 +7,7 @@ ui <- fluidPage(
     column(
       6,
       cascadeSelectInput(
-        "textInput",
+        "cascade",
         choices = folder,
         placeholder = "Select a file",
         optionLabel = "fname",
@@ -23,11 +22,13 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
-  output$textOutput <- renderText({
-    sprintf("You entered: %s", input$textInput)
+  output[["textOutput"]] <- renderText({
+    choice <- input[["cascade"]]
+    sprintf(
+      "You selected the file: %s.\nIts size is: %s.",
+      choice[["fname"]], choice[["size"]]
+    )
   })
-
-  observe(print(input$textInput))
 }
 
 shinyApp(ui, server)

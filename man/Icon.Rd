@@ -4,7 +4,7 @@
 \alias{Icon}
 \title{Create an icon}
 \usage{
-Icon(icon = "pi pi-circle-fill", color = "red", size = "1rem")
+Icon(icon = "pi pi-circle-fill", color = "red", size = "1.5rem")
 }
 \arguments{
 \item{icon}{the name (actually the class name) of the icon;
@@ -15,7 +15,8 @@ Icon(icon = "pi pi-circle-fill", color = "red", size = "1rem")
 for example \code{"bi bi-apple"} (see
 \href{https://icons.getbootstrap.com/}{Bootstrap icons})}
 
-\item{color}{a CSS color}
+\item{color}{a CSS color, e.g. \code{"crimson"} or a hex code like
+\code{"#ffaa07"}}
 
 \item{size}{size of the icon, a css measurement (e.g.
 \code{1rem}, \code{11px})}

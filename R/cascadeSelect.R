@@ -8,7 +8,8 @@
 #'   \code{"fa fa-paper-plane"}, and \strong{Bootstrap icons} are available,
 #'   for example \code{"bi bi-apple"} (see
 #'   \href{https://icons.getbootstrap.com/}{Bootstrap icons})
-#' @param color a CSS color
+#' @param color a CSS color, e.g. \code{"crimson"} or a hex code like
+#'   \code{"#ffaa07"}
 #' @param size size of the icon, a css measurement (e.g.
 #'   \code{1rem}, \code{11px})
 #'
@@ -27,11 +28,14 @@ Icon <- function(icon = "pi pi-circle-fill", color = "red", size = "1.5rem") {
 #' @description Create a cascade select input for Shiny.
 #'
 #' @param inputId the id that will be used to get the selected value in Shiny
-#' @param choices a hierarchical list; see the examples
+#' @param choices a hierarchical list (see the example); each item is given by
+#'   a list with \emph{must} contain an \code{icon} field created with the
+#'   \code{\link{Icon}} function
 #' @param selected the selected value; \code{NULL} for none
 #' @param placeholder placeholder appearing when no selected value
 #' @param optionLabel the label of the options to be selected
-#' @param optionGroupLabel the label of the groups of options
+#' @param optionGroupLabel the label of the groups of options; there can be
+#'   several groups and they must have the same label
 #' @param optionGroupChildren a list of the names of the groups of options
 #' @param theme the CSS theme; see \code{data(themes)} for the list of
 #'   available themes

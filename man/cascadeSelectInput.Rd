@@ -18,7 +18,9 @@ cascadeSelectInput(
 \arguments{
 \item{inputId}{the id that will be used to get the selected value in Shiny}
 
-\item{choices}{a hierarchical list; see the examples}
+\item{choices}{a hierarchical list (see the example); each item is given by
+a list with \emph{must} contain an \code{icon} field created with the
+\code{\link{Icon}} function}
 
 \item{selected}{the selected value; \code{NULL} for none}
 
@@ -26,7 +28,8 @@ cascadeSelectInput(
 
 \item{optionLabel}{the label of the options to be selected}
 
-\item{optionGroupLabel}{the label of the groups of options}
+\item{optionGroupLabel}{the label of the groups of options; there can be
+several groups and they must have the same label}
 
 \item{optionGroupChildren}{a list of the names of the groups of options}
 
