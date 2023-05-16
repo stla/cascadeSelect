@@ -42,3 +42,108 @@ A \code{shiny.tag.list} object to be included in a Shiny UI.
 \description{
 Create a cascade select input for Shiny.
 }
+\examples{
+library(shiny)
+library(cascadeSelect)
+
+## | the hierarchical list of choices
+folders <- list(
+  list( # first folder
+    name = "bootstrap", icon = Icon("bi bi-bootstrap", color = "purple"),
+    subfolders = list(
+      list( # subfolder of the first folder
+        name = "css", icon = Icon("bi bi-folder-fill", color = "orange"),
+        files = list(
+          list(
+            fname = "bootstrap-theme.css", size = "25 KB",
+            icon = Icon("bi bi-filetype-css", color = "steelblue")
+          ),
+          list(
+            fname = "bootstrap.css", size = "142 KB",
+            icon = Icon("bi bi-filetype-css", color = "steelblue")
+          )
+        )
+      ),
+      list( # subfolder of the first folder
+        name = "js", icon = Icon("bi bi-folder-fill", color = "orange"),
+        files = list(
+          list(
+            fname = "bootstrap.js", size = "74 KB",
+            icon = Icon("bi bi-filetype-js", color = "yellow")
+          ),
+          list(
+            fname = "npm.js", size = "484 B",
+            icon = Icon("bi bi-filetype-js", color = "yellow")
+          )
+        )
+      )
+    )
+  ),
+  list( # second folder
+    name = "datatables", icon = Icon("bi bi-table", color = "purple"),
+    subfolders = list(
+      list( # subfolder of the second folder
+        name = "css", icon = Icon("bi bi-folder-fill", color = "orange"),
+        files = list(
+          list(
+            fname = "dataTables.bootstrap.css", size = "7.5 KB",
+            icon = Icon("bi bi-filetype-css", color = "steelblue")
+          ),
+          list(
+            fname = "dataTables.extra.css", size = "1.2 KB",
+            icon = Icon("bi bi-filetype-css", color = "steelblue")
+          )
+        )
+      ),
+      list( # subfolder of the second folder
+        name = "js", icon = Icon("bi bi-folder-fill", color = "orange"),
+        files = list(
+          list(
+            fname = "dataTables.bootstrap.js", size = "4.2 KB",
+            icon = Icon("bi bi-filetype-js", color = "yellow")
+          ),
+          list(
+            fname = "jquerydataTable.min.js", size = "77.1 KB",
+            icon = Icon("bi bi-filetype-js", color = "yellow")
+          )
+        )
+      )
+    )
+  )
+)
+
+## | the Shiny app
+ui <- fluidPage(
+  titlePanel("Cascade Select"),
+  fluidRow(
+    column(
+      6,
+      cascadeSelectInput(
+        "cascade",
+        choices = folders,
+        placeholder = "Select a file",
+        optionLabel = "fname",
+        optionGroupLabel = "name",
+        optionGroupChildren = list("subfolders", "files"),
+        theme = "mdc-dark-deeppurple"
+      ),
+      br(),br(),
+      uiOutput("textOutput")
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  output[["textOutput"]] <- renderUI({
+    choice <- req(input[["cascade"]])
+    tagList(
+      tags$h4("You selected the file: ", sQuote(choice[["fname"]]), "."),
+      tags$h4("Its size is: " , choice[["size"]], ".")
+    )
+  })
+}
+
+if(interactive()) {
+  shinyApp(ui, server)
+}
+}

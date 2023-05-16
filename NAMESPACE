@@ -2,7 +2,6 @@
 
 export(Icon)
 export(cascadeSelectInput)
-export(updateCascadeSelectInput)
 importFrom(fontawesome,fa_html_dependency)
 importFrom(grDevices,col2rgb)
 importFrom(grDevices,rgb)

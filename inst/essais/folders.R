@@ -1,10 +1,10 @@
 library(cascadeSelect)
 
 folder <- list(
-  list(
+  list( # first folder
     name = "bootstrap", icon = Icon("bi bi-bootstrap", color = "purple"),
     subfolders = list(
-      list(
+      list( # subfolder of the first folder
         name = "css", icon = Icon("bi bi-folder-fill", color = "orange"),
         files = list(
           list(
@@ -12,12 +12,12 @@ folder <- list(
             icon = Icon("bi bi-filetype-css", color = "steelblue")
           ),
           list(
-            fname = "bootstrap.css", code = "142 KB",
+            fname = "bootstrap.css", size = "142 KB",
             icon = Icon("bi bi-filetype-css", color = "steelblue")
           )
         )
       ),
-      list(
+      list( # subfolder of the first folder
         name = "js", icon = Icon("bi bi-folder-fill", color = "orange"),
         files = list(
           list(
@@ -32,10 +32,10 @@ folder <- list(
       )
     )
   ),
-  list(
+  list( # second folder
     name = "datatables", icon = Icon("bi bi-table", color = "purple"),
     subfolders = list(
-      list(
+      list( # subfolder of the second folder
         name = "css", icon = Icon("bi bi-folder-fill", color = "orange"),
         files = list(
           list(
@@ -48,7 +48,7 @@ folder <- list(
           )
         )
       ),
-      list(
+      list( # subfolder of the second folder
         name = "js", icon = Icon("bi bi-folder-fill", color = "orange"),
         files = list(
           list(
