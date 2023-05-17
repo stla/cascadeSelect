@@ -163,13 +163,13 @@ cascadeSelectInput <- function(
       htmlDependency(
         name = "cascadeSelect-input",
         version = "1.0.0",
-        src = "www/cascadeSelect/cascadeSelect",
+        src = "www/cS",
         package = "cascadeSelect",
         script = "cascadeSelect.js",
         stylesheet = c(
           "primeicons.css",
           "bootstrap-icons/font/bootstrap-icons.min.css",
-          sprintf("themes/%s/theme.css", theme)
+          sprintf("t/%s/theme.css", theme)
         )
       ),
       fa_html_dependency()

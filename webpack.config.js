@@ -3,7 +3,7 @@ var path = require("path");
 module.exports = {
   entry: path.join(__dirname, "srcjs", "cascadeSelect.jsx"),
   output: {
-    path: path.join(__dirname, "inst/www/cascadeSelect/cascadeSelect"),
+    path: path.join(__dirname, "inst/www/cS"),
     filename: "cascadeSelect.js"
   },
   module: {
