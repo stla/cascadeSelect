@@ -14,3 +14,4 @@
 ^CRAN-SUBMISSION$
 ^inst/www/cS/cascadeSelect\.js\.map$
 ^inst/www/cS/raw-svg$
+^inst/www/cS/bootstrap-icons/svg$
