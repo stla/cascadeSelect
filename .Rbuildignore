@@ -13,3 +13,4 @@
 ^\.github$
 ^CRAN-SUBMISSION$
 ^inst/www/cS/cascadeSelect\.js\.map$
+^inst/www/cS/raw-svg$
