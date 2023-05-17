@@ -12,7 +12,6 @@
 ^cran-comments\.md$
 ^\.github$
 ^CRAN-SUBMISSION$
-^inst/www/cS/cascadeSelect\.js\.map$
 ^inst/www/cS/raw-svg$
 ^inst/www/cS/bootstrap-icons/svg$
 ^inst/www/cS/t/themes_trash$
