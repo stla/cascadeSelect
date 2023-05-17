@@ -11,3 +11,5 @@
 ^data-raw$
 ^cran-comments\.md$
 ^\.github$
+^CRAN-SUBMISSION$
+^inst/www/cS/cascadeSelect\.js\.map$
