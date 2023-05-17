@@ -9,3 +9,5 @@
 ^inst/trash$
 ^inst/gifs$
 ^data-raw$
+^cran-comments\.md$
+^\.github$
