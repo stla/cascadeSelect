@@ -12,8 +12,8 @@ ui <- fluidPage(
         placeholder = "Select a file",
         optionLabel = "fname",
         optionGroupLabel = "name",
-        optionGroupChildren = list("subfolders", "files"),
-        theme = "mdc-dark-deeppurple"
+        optionGroupChildren = list("subfolders", "files"), # (sub, subsub)
+        theme = "lara-dark-blue"
       ),
       br(),br(),
       textOutput("textOutput")

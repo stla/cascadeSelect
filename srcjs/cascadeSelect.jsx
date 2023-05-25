@@ -29,7 +29,11 @@ const App = (props) => {
               <i
                 key={todoCounter++}
                 className={option.icon.icon}
-                style={{ color: option.icon.color, fontSize: option.icon.size }}
+                style={{ 
+                  color: option.icon.color, 
+                  fontSize: option.icon.size,
+                  transform: `scale(${option.icon.scale})`
+                }}
               />
             )
           );
@@ -38,7 +42,11 @@ const App = (props) => {
         {option[props.optionLabel] && (
           <i
             className={option.icon.icon}
-            style={{ color: option.icon.color, fontSize: option.icon.size }}
+            style={{ 
+              color: option.icon.color, 
+              fontSize: option.icon.size, 
+              transform: `scale(${option.icon.scale})`
+            }}
           />
         )}
         <span style={{ fontSize: "1.5rem" }}>{option[props.optionLabel]}</span>

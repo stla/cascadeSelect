@@ -2,6 +2,7 @@
 
 export(Icon)
 export(cascadeSelectInput)
+export(oiIcons)
 importFrom(fontawesome,fa_html_dependency)
 importFrom(grDevices,col2rgb)
 importFrom(grDevices,rgb)
@@ -9,3 +10,4 @@ importFrom(htmltools,htmlDependency)
 importFrom(htmltools,tags)
 importFrom(htmltools,validateCssUnit)
 importFrom(reactR,createReactShinyInput)
+importFrom(tools,file_path_sans_ext)

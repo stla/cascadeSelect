@@ -4,7 +4,7 @@
 \alias{Icon}
 \title{Create an icon}
 \usage{
-Icon(icon = "pi pi-circle-fill", color = "red", size = "1.5rem")
+Icon(icon = "pi pi-circle-fill", color = "red", size = "1.5rem", scale = 1)
 }
 \arguments{
 \item{icon}{the name (actually the class name) of the icon;
@@ -19,7 +19,13 @@ for example \code{"bi bi-apple"} (see
 \code{"#ffaa07"}}
 
 \item{size}{size of the icon, a css measurement (e.g.
-\code{1rem}, \code{11px})}
+\code{1rem}, \code{11px}); for the \code{oi} family of icons (see
+\code{\link{oiIcons}}), do not change the default size and use the
+\code{scale} argument instead}
+
+\item{scale}{a positive number, the scale for an \code{oi} icon (see
+\code{\link{oiIcons}}); you must use this argument to control its size,
+not the \code{size} argument}
 }
 \value{
 A list to be included in the fields \code{icon} of the \code{choices}
@@ -27,4 +33,7 @@ A list to be included in the fields \code{icon} of the \code{choices}
 }
 \description{
 Create an icon with a given color and a given size.
+}
+\note{
+The \code{color} argument has no effect on the \code{oi} icons.
 }
