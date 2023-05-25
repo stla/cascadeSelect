@@ -2,10 +2,10 @@ library(cascadeSelect)
 
 folder <- list(
   list( # first folder
-    name = "bootstrap", icon = Icon("oi oi-markdown", color = "purple"),
+    name = "bootstrap", icon = Icon("oi oi-markdown", color = "purple", scale=2),
     subfolders = list(
       list( # subfolder of the first folder
-        name = "css", icon = Icon("bi bi-folder-fill", color = "orange"),
+        name = "css", icon = Icon("oi oi-json", color = "orange"),
         files = list(
           list(
             fname = "bootstrap-theme.css", size = "25 KB",

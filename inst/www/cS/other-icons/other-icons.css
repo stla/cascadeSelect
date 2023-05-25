@@ -9,6 +9,9 @@
 .oi-c::before {
   content: url(./svg/c.svg);
 }
+.oi-cabal::before {
+  content: url(./svg/cabal.svg);
+}
 .oi-cpp::before {
   content: url(./svg/cpp.svg);
 }
@@ -32,6 +35,9 @@
 }
 .oi-julia::before {
   content: url(./svg/julia.svg);
+}
+.oi-license::before {
+  content: url(./svg/license.svg);
 }
 .oi-markdown::before {
   content: url(./svg/markdown.svg);
