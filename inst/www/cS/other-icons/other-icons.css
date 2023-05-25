@@ -4,7 +4,6 @@
   display: inline-block;
   line-height: 1;
   vertical-align: -.125em;
-  /*transform: scale(2);*/
 }
 
 .oi-c::before {
@@ -25,8 +24,20 @@
 .oi-html::before {
   content: url(./svg/html.svg);
 }
+.oi-javascript::before {
+  content: url(./svg/javascript.svg);
+}
+.oi-json::before {
+  content: url(./svg/json.svg);
+}
+.oi-julia::before {
+  content: url(./svg/julia.svg);
+}
 .oi-markdown::before {
   content: url(./svg/markdown.svg);
+}
+.oi-python::before {
+  content: url(./svg/python.svg);
 }
 .oi-r::before {
   content: url(./svg/r.svg);
