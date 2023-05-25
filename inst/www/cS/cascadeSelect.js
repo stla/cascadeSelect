@@ -9251,14 +9251,16 @@ var App = function App(props) {
         className: option.icon.icon,
         style: {
           color: option.icon.color,
-          fontSize: option.icon.size
+          fontSize: option.icon.size,
+          transform: "scale(".concat(option.icon.scale, ")")
         }
       });
     }), option[props.optionLabel] && /*#__PURE__*/React.createElement("i", {
       className: option.icon.icon,
       style: {
         color: option.icon.color,
-        fontSize: option.icon.size
+        fontSize: option.icon.size,
+        transform: "scale(".concat(option.icon.scale, ")")
       }
     }), /*#__PURE__*/React.createElement("span", {
       style: {
